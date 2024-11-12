@@ -24,7 +24,7 @@ export INSECURE_SKIP_TLS_VERIFY=${INSECURE_SKIP_TLS_VERIFY-true}
 # for gitops, if acs scans are set, we still may not want that repo 
 # to be updates so include an option to disable
 
-export DISABLE_GITOPS_UPDATE=${DISABLE_GITOPS_UPDATE-false}
+export DISABLE_GITOPS_UPDATE=false
 export GITOPS_REPO_URL=https://github.com/rhtap-test-organization-jk/java-jenkins-1211-gitops
 
 export PARAM_IMAGE=${PARAM_IMAGE-$IMAGE}
@@ -41,10 +41,10 @@ export TARGET_BRANCH=${TARGET_BRANCH-""}
 # enterprise contract
 export POLICY_CONFIGURATION=${POLICY_CONFIGURATION-"github.com/enterprise-contract/config//rhtap-jenkins"}
 #internal, assumes jenkins is local openshift
-export REKOR_HOST=${REKOR_HOST-http://rekor-server.rhtap-tas.svc}
+export REKOR_HOST=https://rekor-server-rhtap-tas.apps.rosa.m3hen-9ez5z-h5b.cy1b.p3.openshiftapps.com
 export IGNORE_REKOR=${IGNORE_REKOR-false}
 export INFO=${INFO-true}
 export STRICT=${STRICT-true}
 export EFFECTIVE_TIME=${EFFECTIVE_TIME-now}
 export HOMEDIR=${HOMEDIR-$(pwd)}
-export TUF_MIRROR=${TUF_MIRROR-http://tuf.rhtap-tas.svc}
+export TUF_MIRROR=https://tuf-rhtap-tas.apps.rosa.m3hen-9ez5z-h5b.cy1b.p3.openshiftapps.com
